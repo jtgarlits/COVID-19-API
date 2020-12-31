@@ -1,0 +1,32 @@
+h3 {
+    color: var(--lightgreen);
+}
+
+#map {
+
+    margin: auto;
+    margin-top: 20px;
+
+}
+
+.list-group {
+
+    width: 650px;
+    margin: auto;
+
+}
+
+#data {
+
+    background-color: white;
+    width: 300px;
+    color: var(--darkgreen);
+
+}
+
+.col {
+
+    border: black solid 1px;
+    padding: 5px;
+
+}

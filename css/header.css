@@ -1,0 +1,7 @@
+.jumbotron {
+    /* height: 30vh; */
+    color: var(--lightgreen);
+    margin-bottom: 0px;
+    background-color: var(--black);
+    padding: 20px;
+}

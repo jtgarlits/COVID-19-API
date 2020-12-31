@@ -1,0 +1,9 @@
+@import "variables.css";
+@import "header.css";
+@import "body.css";
+
+body {
+    background-color: var(--black);
+    font-family: 'Oswald', sans-serif;
+}
+
