@@ -4,8 +4,21 @@
     --black: #222629;
     --darkgrey: #474B4F;
     --lightgrey: #6B6E70;
-    --lightred: #ff4848;
-    --darkred: #921d1d;
-    --lightyellow: #e4e000;
-    --darkyellow:  #a09e15;
+
+    --lvl1light: #4ce030;
+    --lvl1dark: #2d8e1a;
+
+    --lvl2light: #98b800;
+    --lvl2dark: #5f7300;
+
+    --lvl3light: #bb8d00;
+    --lvl3light: #755600;
+
+
+    --lvl4light: #cc5b00;
+    --lvl4dark:#7e3600;
+
+
+    --lvl5light:#c91919;
+    --lvl5dark: #7a0e0e;
 }

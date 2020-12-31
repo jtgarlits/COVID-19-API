@@ -12,8 +12,8 @@ var simplemaps_usmap_mapdata={
     
     //State defaults
     state_description: "",
-    state_color: "#86C232",
-    state_hover_color: "#61892F",
+    state_color: "#4ce030",
+    state_hover_color: "#2d8e1a",
     state_url: "",
     all_states_inactive: "no",
     
@@ -52,448 +52,448 @@ var simplemaps_usmap_mapdata={
       hide: "no",
       inactive: "no",
       population: 1407006,
-      color: "#86C232",
-      hover_color: "#61892F"
+      color: "#4ce030",
+      hover_color: "#2d8e1a"
     },
     AK: {
       name: "Alaska",
       hide: "no",
       inactive: "no",
       population: 3030522,
-      color: "#86C232",
-      hover_color: "#61892F"
+      color: "#4ce030",
+      hover_color: "#2d8e1a"
     },
     FL: {
       name: "Florida",
       inactive: "no",
       hide: "no",
       population: 21733312,
-      color: "#86C232",
-      hover_color: "#61892F"
+      color: "#4ce030",
+      hover_color: "#2d8e1a"
     },
     NH: {
       name: "New Hampshire",
       hide: "no",
       inactive: "no",
       population: 1366275,
-      color: "#86C232",
-      hover_color: "#61892F"
+      color: "#4ce030",
+      hover_color: "#2d8e1a"
     },
     VT: {
       name: "Vermont",
       hide: "no",
       inactive: "no",
       population: 623347,
-      color: "#86C232",
-      hover_color: "#61892F"
+      color: "#4ce030",
+      hover_color: "#2d8e1a"
     },
     ME: {
       name: "Maine",
       hide: "no",
       inactive: "no",
       population: 1350141,
-      color: "#86C232",
-      hover_color: "#61892F"
+      color: "#4ce030",
+      hover_color: "#2d8e1a"
     },
     RI: {
       name: "Rhode Island",
       hide: "no",
       inactive: "no",
       population: 1057125,
-      color: "#86C232",
-      hover_color: "#61892F"
+      color: "#4ce030",
+      hover_color: "#2d8e1a"
     },
     NY: {
       name: "New York",
       hide: "no",
       inactive: "no",
       population: 19336776,
-      color: "#86C232",
-      hover_color: "#61892F"
+      color: "#4ce030",
+      hover_color: "#2d8e1a"
     },
     PA: {
       name: "Pennsylvania",
       hide: "no",
       inactive: "no",
       population: 12783254,
-      color: "#86C232",
-      hover_color: "#61892F"
+      color: "#4ce030",
+      hover_color: "#2d8e1a"
     },
     NJ: {
       name: "New Jersey",
       hide: "no",
       inactive: "no",
       population: 8882371,
-      color: "#86C232",
-      hover_color: "#61892F"
+      color: "#4ce030",
+      hover_color: "#2d8e1a"
     },
     DE: {
       name: "Delaware",
       hide: "no",
       inactive: "no",
       population: 986809,
-      color: "#86C232",
-      hover_color: "#61892F"
+      color: "#4ce030",
+      hover_color: "#2d8e1a"
     },
     MD: {
       name: "Maryland",
       hide: "no",
       inactive: "no",
       population: 6055802,
-      color: "#86C232",
-      hover_color: "#61892F"
+      color: "#4ce030",
+      hover_color: "#2d8e1a"
     },
     VA: {
       name: "Virginia",
       hide: "no",
       inactive: "no",
       population: 8590563,
-      color: "#86C232",
-      hover_color: "#61892F"
+      color: "#4ce030",
+      hover_color: "#2d8e1a"
     },
     WV: {
       name: "West Virginia",
       hide: "no",
       inactive: "no",
       population: 1784787,
-      color: "#86C232",
-      hover_color: "#61892F"
+      color: "#4ce030",
+      hover_color: "#2d8e1a"
     },
     OH: {
       name: "Ohio",
       hide: "no",
       inactive: "no",
       population: 11693217,
-      color: "#86C232",
-      hover_color: "#61892F"
+      color: "#4ce030",
+      hover_color: "#2d8e1a"
     },
     IN: {
       name: "Indiana",
       hide: "no",
       inactive: "no",
       population: 6754953,
-      color: "#86C232",
-      hover_color: "#61892F"
+      color: "#4ce030",
+      hover_color: "#2d8e1a"
     },
     IL: {
       name: "Illinois",
       hide: "no",
       inactive: "no",
       population: 12587530,
-      color: "#86C232",
-      hover_color: "#61892F"
+      color: "#4ce030",
+      hover_color: "#2d8e1a"
     },
     CT: {
       name: "Connecticut",
       hide: "no",
       inactive: "no",
       population: 3557006,
-      color: "#86C232",
-      hover_color: "#61892F"
+      color: "#4ce030",
+      hover_color: "#2d8e1a"
     },
     WI: {
       name: "Wisconsin",
       hide: "no",
       inactive: "no",
       population: 5832655,
-      color: "#86C232",
-      hover_color: "#61892F"
+      color: "#4ce030",
+      hover_color: "#2d8e1a"
     },
     NC: {
       name: "North Carolina",
       hide: "no",
       inactive: "no",
       population: 10600823,
-      color: "#86C232",
-      hover_color: "#61892F"
+      color: "#4ce030",
+      hover_color: "#2d8e1a"
     },
     DC: {
       name: "District of Columbia",
       hide: "no",
       inactive: "no",
       population: 712816,
-      color: "#86C232",
-      hover_color: "#61892F"
+      color: "#4ce030",
+      hover_color: "#2d8e1a"
     },
     MA: {
       name: "Massachusetts",
       hide: "no",
       inactive: "no",
       population: 6893574,
-      color: "#86C232",
-      hover_color: "#61892F"
+      color: "#4ce030",
+      hover_color: "#2d8e1a"
     },
     TN: {
       name: "Tennessee",
       hide: "no",
       inactive: "no",
       population: 6886834,
-      color: "#86C232",
-      hover_color: "#61892F"
+      color: "#4ce030",
+      hover_color: "#2d8e1a"
     },
     AR: {
       name: "Arkansas",
       hide: "no",
       inactive: "no",
       population: 3030522,
-      color: "#86C232",
-      hover_color: "#61892F"
+      color: "#4ce030",
+      hover_color: "#2d8e1a"
     },
     MO: {
       name: "Missouri",
       hide: "no",
       inactive: "no",
       population: 6151548,
-      color: "#86C232",
-      hover_color: "#61892F"
+      color: "#4ce030",
+      hover_color: "#2d8e1a"
     },
     GA: {
       name: "Georgia",
       hide: "no",
       inactive: "no",
       population: 10710017,
-      color: "#86C232",
-      hover_color: "#61892F"
+      color: "#4ce030",
+      hover_color: "#2d8e1a"
     },
     SC: {
       name: "South Carolina",
       hide: "no",
       inactive: "no",
       population: 5218040,
-      color: "#86C232",
-      hover_color: "#61892F"
+      color: "#4ce030",
+      hover_color: "#2d8e1a"
     },
     KY: {
       name: "Kentucky",
       hide: "no",
       inactive: "no",
       population: 4477251,
-      color: "#86C232",
-      hover_color: "#61892F"
+      color: "#4ce030",
+      hover_color: "#2d8e1a"
     },
     AL: {
       name: "Alabama",
       hide: "no",
       inactive: "no",
       population: 4921532,
-      color: "#86C232",
-      hover_color: "#61892F"
+      color: "#4ce030",
+      hover_color: "#2d8e1a"
     },
     LA: {
       name: "Louisiana",
       hide: "no",
       inactive: "no",
       population: 4645318,
-      color: "#86C232",
-      hover_color: "#61892F"
+      color: "#4ce030",
+      hover_color: "#2d8e1a"
     },
     MS: {
       name: "Mississippi",
       hide: "no",
       inactive: "no",
       population: 2966786,
-      color: "#86C232",
-      hover_color: "#61892F"
+      color: "#4ce030",
+      hover_color: "#2d8e1a"
     },
     IA: {
       name: "Iowa",
       hide: "no",
       inactive: "no",
       population: 3163561,
-      color: "#86C232",
-      hover_color: "#61892F"
+      color: "#4ce030",
+      hover_color: "#2d8e1a"
     },
     MN: {
       name: "Minnesota",
       hide: "no",
       inactive: "no",
       population: 5657342,
-      color: "#86C232",
-      hover_color: "#61892F"
+      color: "#4ce030",
+      hover_color: "#2d8e1a"
     },
     OK: {
       name: "Oklahoma",
       hide: "no",
       inactive: "no",
       population: 3980783,
-      color: "#86C232",
-      hover_color: "#61892F"
+      color: "#4ce030",
+      hover_color: "#2d8e1a"
     },
     TX: {
       name: "Texas",
       hide: "no",
       inactive: "no",
       population: 29360759,
-      color: "#86C232",
-      hover_color: "#61892F"
+      color: "#4ce030",
+      hover_color: "#2d8e1a"
     },
     NM: {
       name: "New Mexico",
       hide: "no",
       inactive: "no",
       population: 2106319,
-      color: "#86C232",
-      hover_color: "#61892F"
+      color: "#4ce030",
+      hover_color: "#2d8e1a"
     },
     KS: {
       name: "Kansas",
       hide: "no",
       inactive: "no",
       population: 2913805,
-      color: "#86C232",
-      hover_color: "#61892F"
+      color: "#4ce030",
+      hover_color: "#2d8e1a"
     },
     NE: {
       name: "Nebraska",
       hide: "no",
       inactive: "no",
       population: 1937552,
-      color: "#86C232",
-      hover_color: "#61892F"
+      color: "#4ce030",
+      hover_color: "#2d8e1a"
     },
     SD: {
       name: "South Dakota",
       hide: "no",
       inactive: "no",
       population: 892717,
-      color: "#86C232",
-      hover_color: "#61892F"
+      color: "#4ce030",
+      hover_color: "#2d8e1a"
     },
     ND: {
       name: "North Dakota",
       hide: "no",
       inactive: "no",
       population: 765309,
-      color: "#86C232",
-      hover_color: "#61892F"
+      color: "#4ce030",
+      hover_color: "#2d8e1a"
     },
     WY: {
       name: "Wyoming",
       hide: "no",
       inactive: "no",
       population: 582328,
-      color: "#86C232",
-      hover_color: "#61892F"
+      color: "#4ce030",
+      hover_color: "#2d8e1a"
     },
     MT: {
       name: "Montana",
       hide: "no",
       inactive: "no",
       population: 1080577,
-      color: "#86C232",
-      hover_color: "#61892F"
+      color: "#4ce030",
+      hover_color: "#2d8e1a"
     },
     CO: {
       name: "Colorado",
       hide: "no",
       inactive: "no",
       population: 5807719,
-      color: "#86C232",
-      hover_color: "#61892F"
+      color: "#4ce030",
+      hover_color: "#2d8e1a"
     },
     UT: {
       name: "Utah",
       hide: "no",
       inactive: "no",
       population: 3249879,
-      color: "#86C232",
-      hover_color: "#61892F"
+      color: "#4ce030",
+      hover_color: "#2d8e1a"
     },
     AZ: {
       name: "Arizona",
       hide: "no",
       inactive: "no",
       population: 7421401,
-      color: "#86C232",
-      hover_color: "#61892F"
+      color: "#4ce030",
+      hover_color: "#2d8e1a"
     },
     NV: {
       name: "Nevada",
       hide: "no",
       inactive: "no",
       population: 3138259,
-      color: "#86C232",
-      hover_color: "#61892F"
+      color: "#4ce030",
+      hover_color: "#2d8e1a"
     },
     OR: {
       name: "Oregon",
       hide: "no",
       inactive: "no",
       population: 4241507,
-      color: "#86C232",
-      hover_color: "#61892F"
+      color: "#4ce030",
+      hover_color: "#2d8e1a"
     },
     WA: {
       name: "Washington",
       hide: "no",
       inactive: "no",
       population: 7693612,
-      color: "#86C232",
-      hover_color: "#61892F"
+      color: "#4ce030",
+      hover_color: "#2d8e1a"
     },
     CA: {
       name: "California",
       hide: "no",
       inactive: "no",
       population: 39368078,
-      color: "#86C232",
-      hover_color: "#61892F"
+      color: "#4ce030",
+      hover_color: "#2d8e1a"
     },
     MI: {
       name: "Michigan",
       hide: "no",
       inactive: "no",
       population: 9966555,
-      color: "#86C232",
-      hover_color: "#61892F"
+      color: "#4ce030",
+      hover_color: "#2d8e1a"
     },
     ID: {
       name: "Idaho",
       hide: "no",
       inactive: "no",
       population: 1826913,
-      color: "#86C232",
-      hover_color: "#61892F"
+      color: "#4ce030",
+      hover_color: "#2d8e1a"
     },
     GU: {
       name: "Guam",
       hide: "yes",
       inactive: "no",
       population: 168485,
-      color: "#86C232",
-      hover_color: "#61892F"
+      color: "#4ce030",
+      hover_color: "#2d8e1a"
     },
     VI: {
       name: "Virgin Islands",
       hide: "yes",
       inactive: "no",
       population: 106235,
-      color: "#86C232",
-      hover_color: "#61892F"
+      color: "#4ce030",
+      hover_color: "#2d8e1a"
     },
     PR: {
       name: "Puerto Rico",
       hide: "yes",
       inactive: "no",
       population: 3189068,
-      color: "#86C232",
-      hover_color: "#61892F"
+      color: "#4ce030",
+      hover_color: "#2d8e1a"
     },
     MP: {
       name: "Northern Mariana Islands",
       hide: "yes",
       inactive: "no",
       population: 51433,
-      color: "#86C232",
-      hover_color: "#61892F"
+      color: "#4ce030",
+      hover_color: "#2d8e1a"
     },
     AS: {
       name: "American Samoa",
       hide: "yes",
       inactive: "no",
       population: 49437,
-      color: "#86C232",
-      hover_color: "#61892F"
+      color: "#4ce030",
+      hover_color: "#2d8e1a"
     }
   },
   locations: {},

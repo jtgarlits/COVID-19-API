@@ -30,6 +30,7 @@ let percap;
 let deaths;
 
 let statespercap = {};
+let arr = new Array();
 
 let lastupdated = new Date("1999-06-28T00:00:00.000+05:00");
 
@@ -45,6 +46,20 @@ $("#map").on("click", checkClick);
 
 // Funtions
 
+const asc = arr => arr.sort((a, b) => a - b);
+
+const quantile = (arr, q) => {
+    const sorted = asc(arr);
+    const pos = (sorted.length - 1) * q;
+    const base = Math.floor(pos);
+    const rest = pos - base;
+    if (sorted[base + 1] !== undefined) {
+        return sorted[base] + rest * (sorted[base + 1] - sorted[base]);
+    } else {
+        return sorted[base];
+    }
+};
+
 function setUS(json) {
 
     us = json;
@@ -57,7 +72,7 @@ function setUS(json) {
     usdeathinc = json[0].deathIncrease;
 
     dispcases.innerText = uscases.toLocaleString('en');
-    dispper100k.innerText = uspercap.toLocaleString('en', {maximumFractionDigits: 0});
+    dispper100k.innerText = uspercap.toLocaleString('en', { maximumFractionDigits: 0 });
     dispdeaths.innerText = usdeaths.toLocaleString('en');
     dispcaseinc.innerText = uscaseinc.toLocaleString('en');
     dispdeathinc.innerText = usdeathinc.toLocaleString('en');
@@ -70,37 +85,60 @@ function setState(json) {
     console.log(states);
     console.log(statemap);
 
-    for (let st of states){
+    for (let st of states) {
 
         let id = st.state;
         let pop = statemap[id].population;
 
-        let temp = ((st.positive) / (pop) * 100000 );
+        let temp = ((st.positive) / (pop) * 100000);
 
         statespercap[id] = temp;
-
-        switch (true) {
-            case (temp > 7500):
-                simplemaps_usmap_mapdata.state_specific[id].color = '#ff4848';
-                simplemaps_usmap_mapdata.state_specific[id].hover_color = '#921d1d';
-                break;
-            case (temp > 5000):
-                simplemaps_usmap_mapdata.state_specific[id].color = ' #e4e000';
-                simplemaps_usmap_mapdata.state_specific[id].hover_color = '#a09e15';
-                break;
-        }
+        arr.push(Number(temp));
+    
 
         let updated = st.lastUpdateEt;
-        console.log(updated);
-        if(updated != null){
-            let month = (updated.substr(0,2));
-            let day = (updated.substr(3,2));
-            let year = (updated.substr(6,4));
-            let hours = (updated.substr(11,2));
-            let mins = (updated.substr(14,2));
+        if (updated != null) {
+            let month = (updated.substr(0, 2));
+            let day = (updated.substr(3, 2));
+            let year = (updated.substr(6, 4));
+            let hours = (updated.substr(11, 2));
+            let mins = (updated.substr(14, 2));
 
             updated = new Date(`${year}-${month}-${day}T${hours}:${mins}:00.000-05:00`);
-            if(updated > lastupdated) lastupdated = updated;
+            if (updated > lastupdated) lastupdated = updated;
+        }
+
+    }
+
+
+    const q20 = quantile(arr, .2);
+    const q40 = quantile(arr, .4);
+    const q60 = quantile(arr, .6);
+    const q80 = quantile(arr, .8);
+
+    for (let st of states) {
+
+        let id = st.state;
+        let pop = statemap[id].population;
+        let temp = ((st.positive) / (pop) * 100000);
+
+        switch (true) {
+            case (temp > q80):
+                simplemaps_usmap_mapdata.state_specific[id].color = '#c91919';
+                simplemaps_usmap_mapdata.state_specific[id].hover_color = '#7a0e0e';
+                break;
+            case (temp > q60):
+                simplemaps_usmap_mapdata.state_specific[id].color = ' #cc5b00';
+                simplemaps_usmap_mapdata.state_specific[id].hover_color = '#7e3600';
+                break;
+            case (temp > q40):
+                simplemaps_usmap_mapdata.state_specific[id].color = ' #bb8d00';
+                simplemaps_usmap_mapdata.state_specific[id].hover_color = '#755600';
+                break;
+            case (temp > q20):
+                simplemaps_usmap_mapdata.state_specific[id].color = ' #98b800';
+                simplemaps_usmap_mapdata.state_specific[id].hover_color = '#5f7300';
+                break;
         }
 
     }
@@ -111,61 +149,59 @@ function setState(json) {
 
 }
 
-function checkClick(e){
+function checkClick(e) {
 
-    let sel =  $(e.target).text();
+    let sel = $(e.target).text();
     let check = ($(e.target))[0].classList[0];
     let type = ($(e.target))[0].localName;
 
-    console.log(sel);
-    console.log(check);
-    console.log(type);
 
-    if((sel == "" || sel == "Created with Raphaël 2.1.0")&& check == undefined && (type == "path" || type == "svg")){
+    if ((sel == "" || sel == "Created with Raphaël 2.1.0") && check == undefined && (type == "path" || type == "svg")) {
         dispcases.innerText = uscases.toLocaleString('en');
-        dispper100k.innerText = uspercap.toLocaleString('en', {maximumFractionDigits: 0});
+        dispper100k.innerText = uspercap.toLocaleString('en', { maximumFractionDigits: 0 });
         dispdeaths.innerText = usdeaths.toLocaleString('en');
         dispcaseinc.innerText = uscaseinc.toLocaleString('en');
         dispdeathinc.innerText = usdeathinc.toLocaleString('en');
         datatitle.innerText = 'United States';
     }
-    else if (sel == "" && check != undefined){
+    else if (sel == "" && check != undefined) {
         sel = check.slice(-2);
         let temp = states.filter(obj => {
             return obj.state == sel
-            
+
         })
         dispcases.innerText = temp[0].positive.toLocaleString('en');
-        dispper100k.innerText = statespercap[sel].toLocaleString('en', {maximumFractionDigits: 0});
+        dispper100k.innerText = statespercap[sel].toLocaleString('en', { maximumFractionDigits: 0 });
         dispdeaths.innerText = temp[0].death.toLocaleString('en');
-        dispcaseinc.innerText =temp[0].positiveIncrease.toLocaleString('en');
-        dispdeathinc.innerText =temp[0].deathIncrease.toLocaleString('en');
+        dispcaseinc.innerText = temp[0].positiveIncrease.toLocaleString('en');
+        dispdeathinc.innerText = temp[0].deathIncrease.toLocaleString('en');
         datatitle.innerText = statemap[sel].name;
 
     }
-    else if (sel != ""){
+    else if (sel != "") {
         let temp = states.filter(obj => {
             return obj.state == sel
-            
+
         })
         dispcases.innerText = temp[0].positive.toLocaleString('en');
-        dispper100k.innerText = statespercap[sel].toLocaleString('en', {maximumFractionDigits: 0});
+        dispper100k.innerText = statespercap[sel].toLocaleString('en', { maximumFractionDigits: 0 });
         dispdeaths.innerText = temp[0].death.toLocaleString('en');
-        dispcaseinc.innerText =temp[0].positiveIncrease.toLocaleString('en');
-        dispdeathinc.innerText =temp[0].deathIncrease.toLocaleString('en');
+        dispcaseinc.innerText = temp[0].positiveIncrease.toLocaleString('en');
+        dispdeathinc.innerText = temp[0].deathIncrease.toLocaleString('en');
         datatitle.innerText = statemap[sel].name;
     }
-    else{}
+    else { }
 
 
 }
 
-function loadmap(){
 
-    var head= document.getElementsByTagName('head')[0];
-      var script= document.createElement('script');
-      script.src= 'js/usmap.js';
-      head.appendChild(script);
+function loadmap() {
+
+    var head = document.getElementsByTagName('head')[0];
+    var script = document.createElement('script');
+    script.src = 'js/usmap.js';
+    head.appendChild(script);
 
 }
 
