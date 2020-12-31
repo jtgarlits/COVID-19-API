@@ -1,6 +1,12 @@
 @import "variables.css";
 @import "header.css";
 @import "body.css";
+@import "footer.css";
+
+html,
+body {
+  height: 100%;
+}
 
 body {
     background-color: var(--black);
