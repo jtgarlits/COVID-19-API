@@ -11,5 +11,9 @@ body {
 body {
     background-color: var(--black);
     font-family: 'Oswald', sans-serif;
+
+    display: flex;
+    flex-direction: column;
+
 }
 
