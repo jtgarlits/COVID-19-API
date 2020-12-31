@@ -113,12 +113,15 @@ function setState(json) {
 
 function checkClick(e){
 
+    let sel =  $(e.target).text();
     let check = ($(e.target))[0].classList[0];
     let type = ($(e.target))[0].localName;
 
-    let sel =  $(e.target).text();
+    console.log(sel);
+    console.log(check);
+    console.log(type);
 
-    if(sel == "" && check == undefined && type == "path"){
+    if((sel == "" || sel == "Created with Raphaël 2.1.0")&& check == undefined && (type == "path" || type == "svg")){
         dispcases.innerText = uscases.toLocaleString('en');
         dispper100k.innerText = uspercap.toLocaleString('en', {maximumFractionDigits: 0});
         dispdeaths.innerText = usdeaths.toLocaleString('en');
