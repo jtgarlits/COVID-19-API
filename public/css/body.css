@@ -4,9 +4,10 @@ h3 {
 
 #mapcontainer{
     width: 100%;
-    max-width: 750px;
+    max-width: 900px;
     margin: auto;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .list-group {

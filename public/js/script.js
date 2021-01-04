@@ -155,6 +155,8 @@ function checkClick(e) {
     let check = ($(e.target))[0].classList[0];
     let type = ($(e.target))[0].localName;
 
+    console.log(`sel: ${sel}   |   check: ${check}   |   type: ${type}`);
+
 
     if ((sel == "" || sel == "Created with Raphaël 2.1.0") && check == undefined && (type == "path" || type == "svg")) {
         dispcases.innerText = uscases.toLocaleString('en');
