@@ -32,7 +32,7 @@ let deaths;
 let statespercap = {};
 let arr = new Array();
 
-let lastupdated = new Date("1999-06-28T00:00:00.000+05:00");
+let lastupdated = new Date("1999-06-28T00:00:00.000");
 
 fetch(us_url)
     .then(usObj => usObj.json())
@@ -95,16 +95,20 @@ function setState(json) {
         statespercap[id] = temp;
         arr.push(Number(temp));
     
+        // console.log(lastupdated)
 
         let updated = st.lastUpdateEt;
         if (updated != null) {
+            if(updated[1] == '/') updated = `0${updated}`;
+            if(updated[4] == '/') updated = `${updated.substr(0, 3)}0${updated.substr(3,15)}`;
+            console.log(updated);
             let month = (updated.substr(0, 2));
             let day = (updated.substr(3, 2));
             let year = (updated.substr(6, 4));
             let hours = (updated.substr(11, 2));
             let mins = (updated.substr(14, 2));
-
-            updated = new Date(`${year}-${month}-${day}T${hours}:${mins}:00.000-05:00`);
+            updated = new Date(`${year}-${month}-${day}T${hours}:${mins}:00.000`);
+            console.log(updated);
             if (updated > lastupdated) lastupdated = updated;
         }
 
@@ -143,7 +147,7 @@ function setState(json) {
 
     }
 
-    dispupdated.innerText = `Data last updated: ${lastupdated}`;
+    dispupdated.innerText = `Data last updated: ${lastupdated.toLocaleString('en-US')}`;
 
     loadmap();
 
